@@ -8,7 +8,7 @@ namespace IccRareFarm.Presentation
 {
     static class Program
     {
-        private static Container container;
+        private static Container container; 
           
         [STAThread]
         static void Main()
