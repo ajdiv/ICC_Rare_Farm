@@ -13,7 +13,8 @@ namespace IccRareFarm.Presentation
         [STAThread]
         static void Main()
         {
-            Application.SetHighDpiMode(HighDpiMode.SystemAware);
+            // Commenting this out to avoid issues w/ .NET Core 3.1 and Windows Forms
+            //Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
@@ -28,7 +29,7 @@ namespace IccRareFarm.Presentation
             container = new Container();
 
             // Register types
-            container.Register<CharacterForm>();
+            container.Register<CharacterForm>(Lifestyle.Singleton);
             container.Register<CharacterTool>(Lifestyle.Singleton);
             container.Register<ICharacterRepo, CharacterRepo>(Lifestyle.Singleton);
 

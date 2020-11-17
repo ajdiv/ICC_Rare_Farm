@@ -12,6 +12,16 @@ namespace IccRareFarm.Business
             characterRepo = charRepo;
         }
 
+        public void AddCharacter(string name)
+        {
+            characterRepo.AddCharacter(name);
+        }
+
+        public void DeleteCharacter(int id)
+        {
+            characterRepo.DeleteCharacter(id);
+        }
+
         public IList<Character> GetCharacterList()
         {
             return characterRepo.GetAllCharacters();
