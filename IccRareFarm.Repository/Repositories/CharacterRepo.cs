@@ -12,7 +12,7 @@ namespace IccRareFarm.Repository
 
         public CharacterRepo()
         {
-            this.FileLocation = Path.GetTempPath() + "test.db";
+            FileLocation = Path.GetTempPath() + "test.db";
         }
 
         public IList<Character> GetAllCharacters() 
